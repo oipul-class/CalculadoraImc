@@ -7,7 +7,7 @@ const Calcular = () => {
     const peso = document.getElementById("peso").value;
     const altura = document.getElementById("altura").value;
     if ( nome !== "" && altura !== "" && peso !== "") {
-        imc = peso /(altura * altura);
+        imc = (peso /(altura * altura)).toFixed(1);
         if (imc <= 18.5 ) {
             saida.innerHTML = nome + "seu imc é " + imc + ", você esta a baixo do peso";
         }
