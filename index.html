@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora IMC</title>
+        <style>
+            
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .CenterOBJ {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #div_ImcCalculatorFrame {
+                border: solid 2px black;
+                border-radius: 20px;
+                width: 600px;
+                height: 400px;
+                margin-top: 100px;
+                background-color: lightblue;
+                padding: 10px;
+                box-shadow: black 2px 2px;
+            }
+
+            #div_CalcInputFrame {
+                border: solid 2px black;
+                border-radius: 20px;
+                width: 270px;
+                height: inherit;
+                float: left;
+                background-color: white;
+            }
+
+            #div_CalcTitle {
+                height: 45px;
+                padding-top: 5px;
+                width: 250px;
+                margin-bottom: 50px;
+            }
+
+            .div_ValueInputs{
+                width: 240px;
+                height: 32px;
+                border: solid 1px black;
+                background-color: grey;
+                border-radius: 15px;
+                padding-top: 12px;
+                padding-right: 22px;
+                text-align: right;
+                margin-top: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #div_ButtonCalc {
+                width: 70px;
+                height: 30px;
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            #div_CalcResultsFrame {
+                float: right;
+                height: 116px;
+                border: solid 2px black;
+                border-radius: 20px;
+                width: 260px;
+                text-align: center;
+                font-size: 25px;
+                padding-top: 80px;
+                background-color: white;
+            }
+
+            #div_CalcImcInfo {
+                float: right;
+                height: 186px;
+                border: solid 2px black;
+                background-color: white;
+                border-radius: 20px;
+                width: 260px;
+                margin-top: 15px;
+                padding: 5p;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 17px;
+            }
+
+            #div_CalcImcInfo h1 {
+                font-size: 20px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div id="div_ImcCalculatorFrame" class="CenterOBJ">
+            <div id="div_CalcInputFrame">
+                <div id="div_CalcTitle" class="CenterOBJ">
+                    <h1>
+                        Calculadora IMC
+                    </h1>
+                </div>
+                
+                <div class="div_ValueInputs CenterOBJ">
+                    <label>
+                        Nome : 
+                    </label>
+                    <input type="text" value="" name="txtNome" id="nome">
+                </div>
+
+                <div class="div_ValueInputs CenterOBJ">
+                    <label>
+                        Peso : 
+                    </label>
+                    <input type="number" value="" name="numPeso" min=0 id="peso">
+                </div>
+
+                <div class="div_ValueInputs CenterOBJ">
+                    <label>
+                        Altura : 
+                    </label>
+                    <input type="number" value="" name="numPeso" min=0 id="altura">
+                </div>
+
+                <div id="div_ButtonCalc" class="CenterOBJ">
+                    <input type="button" value="Calcular" id="btnCalc">
+                </div>
+            </div>
+
+            <div id="div_CalcResultsFrame">
+                
+            </div>
+
+            <div id="div_CalcImcInfo">
+                <h1>
+                    Tabela IMC
+                </h1>
+
+                <p style="color: red;">
+                    < 18.5 = Baixo peso
+                </p>
+
+                <p style="color: green;">
+                     18.5 - 24.9 = Peso saudável
+                </p>
+
+                <p style="color: orange;">
+                    25.0 - 29.9 = Sobrepeso
+               </p>
+
+               <p style="color: red;">
+                    > 30.0 = Obesidade
+                </p>
+            </div>
+            <script src="Script.js"></script>
+        </div>
+    </body>
+</html>
