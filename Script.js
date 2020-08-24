@@ -7,15 +7,15 @@ const Calcular = () => {
     const peso = document.getElementById("peso").value;
     const altura = document.getElementById("altura").value;
     if ( nome !== "" && altura !== "" && peso !== "") {
-        imc = (peso /(altura * altura)).toFixed(1);
+        imc = (peso /(altura * altura)).toFixed(2);
         if (imc <= 18.5 ) {
             saida.innerHTML = nome + "seu imc é " + imc + ", você esta a baixo do peso";
         }
-        if ( imc > 18.5 || imc <= 24.9)  {
+        if ( imc > 18.5 && imc <= 24.9)  {
             saida.innerHTML = nome + " seu imc é " + imc + ", você esta com peso saudável";
         }
 
-        if ( imc > 25.0 || imc <= 29.9)  {
+        if ( imc >= 25.0 && imc <= 29.9)  {
             saida.innerHTML = nome + " seu imc é " + imc + ", você esta com sobrepeso";
         }
 
